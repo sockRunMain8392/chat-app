@@ -2,6 +2,11 @@ var PORT = process.env.PORT || 5000;
 var express = require('express');
 var app = express();
 
+const { platform } = require('os');
+const { kill } = require('process');
+const crypto = require('crypto');
+
+
 var http = require('http');
 var server = http.Server(app);
 
